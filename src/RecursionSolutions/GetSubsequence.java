@@ -12,6 +12,7 @@ public class GetSubsequence {
 		ArrayList<String> arr = getSubSequence(str);
 		System.out.println(arr);
 		s.close();
+		
 	}
 
 	public static ArrayList<String> getSubSequence(String str) {
