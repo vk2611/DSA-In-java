@@ -16,20 +16,29 @@ public class isUnique {
 		return true;
 	}
 
-	public static void solution2(String str) {
-
+	public static boolean solution2(String str) {
+		int countArr[] = new int[26];
+		Arrays.fill(countArr, 0);
+		for (int i = 0; i < str.length(); i++) {
+			if (countArr[str.charAt(i) - 'a'] > 0)
+				return false;
+			else {
+				countArr[str.charAt(i) - 'a'] = 1;
+			}
+		}
+		return true;
 	}
 
-	public static void solution3(String str) {
-
+	public static boolean solution3(String str) {
+		return true;
 	}
 
 	public static void main(String args[]) {
 		Scanner s = new Scanner(System.in);
 		String str = s.next();
 		System.out.println(solution1(str));
-		solution2(str);
-		solution3(str);
+		System.out.println(solution2(str));
+		System.out.println(solution3(str));
 		s.close();
 
 	}
